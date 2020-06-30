@@ -126,7 +126,7 @@ async def on_message(message):
         logging.info('Cleared logs')
 
     if message.content == 'm!ping':
-        message.channel.send('Pong!')
+        await message.channel.send('Pong!')
         logging.info('Send Pong!')
 
 client.run(bot_token)
