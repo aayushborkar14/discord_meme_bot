@@ -115,7 +115,7 @@ async def on_message(message):
         return
 
     if message.content == 'm!help':
-        await message.channel.send("I'm a meme bot created by AbstractGhoul05!\nList of Available Commands:\nm!logs: fetch logs\nm!clearlogs: clear logs\nm!ping: Pong!")
+        await message.channel.send("I'm a meme bot created by AbstractGhoul05!\n\nList of Available Commands:\n`m!logs`: fetch logs\n`m!clearlogs`: clear logs\n`m!ping`: Pong!")
 
     if message.content == 'm!logs':
         logging.info("Sending logs")
