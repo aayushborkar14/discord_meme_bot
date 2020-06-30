@@ -90,7 +90,7 @@ async def send_memes():
         for post in posts:
             logging.info(f'Posting meme: {post.id}')
             check_published = Query()
-            is_published = bool(db.search(check_published.post_id == post.id))
+            is_published = bool(db.search(published_posts_id.post_id == post.id))
             if is_published:
                 continue
             media_url = await get_direct_link(post)
