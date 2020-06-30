@@ -81,8 +81,7 @@ async def on_ready():
     for guild in client.guilds:
         if guild.name == guild_name:
             break
-    logging.info(f'{client.user} has connected to the following guild:\n', 
-    f'{guild.name}(id: {guild.id})')
+    logging.info(f'{client.user} has connected to the following guild:\n{guild.name}(id: {guild.id})')
     client.loop.create_task(loop_through_memes())
 
 async def send_memes():
