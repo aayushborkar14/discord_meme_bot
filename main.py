@@ -97,7 +97,7 @@ async def send_memes():
             media_url = await get_direct_link(post)
             meme_channel = client.get_channel(config['discord']['channel_id'])
             await meme_channel.send(media_url)
-            await meme_channel.send(f"{post.title}\nSource: {post.shortlink} ({post.subreddit_name_prefixed})")
+            await meme_channel.send(f"{post.title}\nSource: {post.subreddit_name_prefixed} ({post.shortlink})")
             logging.info(f'Succesfully posted meme: {post.id}')
             db.insert({'post_id': post.id})
             await asyncio.sleep(300)
