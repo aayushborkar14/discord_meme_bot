@@ -93,12 +93,15 @@ async def send_memes():
             is_published = bool(db.search(check_published.post_id == post.id))
             if is_published:
                 continue
+            db.insert({'post_id': post.id})
             media_url = await get_direct_link(post)
+            if media_url is None:
+                continue
             meme_channel = client.get_channel(config['discord']['channel_id'])
             await meme_channel.send(media_url)
+            await asyncio.sleep(1)
             await meme_channel.send(f"{post.title}\nSource: {post.subreddit_name_prefixed} ({post.shortlink})")
             logging.info(f'Succesfully posted meme: {post.id}')
-            db.insert({'post_id': post.id})
             await asyncio.sleep(300)
     except Exception as e:
         await client.get_channel(config['discord']['channel_id']).send(f"I've encountered some error while posting the meme!\nKindly type `m!logs` to get more info")
