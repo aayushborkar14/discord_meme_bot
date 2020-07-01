@@ -106,6 +106,7 @@ async def send_memes():
     except Exception as e:
         await client.get_channel(config['discord']['channel_id']).send(f"I've encountered some error while posting the meme!\nKindly type `m!logs` to get more info")
         logging.error(f"Error: {e}")
+        await asyncio.sleep(300)
 
 async def loop_through_memes():
     while True:
