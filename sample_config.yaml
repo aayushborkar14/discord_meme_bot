@@ -1,0 +1,44 @@
+
+discord:
+
+    # Discord Bot Token
+    bot_token: 
+
+    # Id of the guild/server you want the bot to post memes to
+    guild_name: 
+
+    # Id of the channel you want the bot to post memes to
+    channel_id: 
+
+    # User id of the creator
+    user_id: 
+
+reddit:
+
+    # Get these from https://www.reddit.com/prefs/apps
+    client_id: 
+    client_secret: 
+    user_agent: 
+    
+    # Reddit account's credentials
+    username: 
+    password: 
+
+    # Priority order of post sorting
+    sorting:
+        - hot
+        - top
+        - new
+
+content:
+
+    # List of meme subreddits to fetch posts
+    subreddits:
+        - memes
+        - dankmemes
+        - indianpeoplefacebook
+        - animemes
+        - hentaimemes
+
+    # Number of posts to fetch at a time from every subreddit (the lower, the more newer memes).
+    refresh_rate: 10
