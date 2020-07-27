@@ -56,13 +56,13 @@ logging.basicConfig(
     filename = 'memebot.log',
     filemode ='w',
     format = '%(asctime)s: %(levelname)s - %(message)s',
-    level = getattr(logging, 'DEBUG' if config['debug']['verbose'] else 'INFO')
+    level = getattr(logging, 'DEBUG')
 )
 
 async def get_posts():
     return set(
         itertools.chain.from_iterable(
-            getattr(subreddit, sort_type)(limit=config['content']['limit']) for sort_type in config['reddit']['sorting']
+            getattr(subreddit, sort_type)(limit=config['content']['refresh_rate']) for sort_type in config['reddit']['sorting']
         )
     )
 
