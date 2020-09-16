@@ -1,6 +1,6 @@
 
 discord:
-
+    # Check https://discordpy.readthedocs.io/en/latest/discord.html for instructions to get these
     # Discord Bot Token
     bot_token: 
 
