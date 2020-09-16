@@ -7,7 +7,7 @@ A simple Discord bot to spam memes 24/7
 
 3. Enter meme bot directory: ```cd discord_meme_bot```
 
-4. Get [Discord](https://discord.com/developers/applications) and [Reddit](https://www.reddit.com/prefs/apps) API keys
+4. Get [Discord](https://discordpy.readthedocs.io/en/latest/discord.html) and [Reddit](https://github.com/reddit-archive/reddit/wiki/OAuth2#getting-started) API keys
 
 5. Create ```config.yaml```: ```cp sample_config.yaml config.yaml```
 
