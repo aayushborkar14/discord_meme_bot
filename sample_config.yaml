@@ -1,4 +1,3 @@
-
 discord:
     # Check https://discordpy.readthedocs.io/en/latest/discord.html for instructions to get these
     # Discord Bot Token
@@ -15,7 +14,7 @@ discord:
 
 reddit:
 
-    # Get these from https://www.reddit.com/prefs/apps
+    # Get these from https://github.com/reddit-archive/reddit/wiki/OAuth2#getting-started
     client_id: 
     client_secret: 
     user_agent: 
