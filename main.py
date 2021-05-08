@@ -100,7 +100,7 @@ async def send_memes():
             meme_channel = client.get_channel(config['discord']['channel_id'])
             await meme_channel.send(media_url)
             await asyncio.sleep(1)
-            await meme_channel.send(f"{post.title}\nSource: {post.subreddit_name_prefixed} ({post.shortlink})")
+            await meme_channel.send(f"{post.title}\nSource: {post.subreddit_name_prefixed} (<{post.shortlink}>)")
             logging.info(f'Succesfully posted meme: {post.id}')
             await asyncio.sleep(300)
     except Exception as e:
