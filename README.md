@@ -33,11 +33,11 @@ Note: Replace myapp with your desired name without spaces
 
 5. Fill in the required stuff in ```config.yaml```
 
-6. Install requirments,
+6. Install requirements,
 for Windows:
-```pip install -r requirments.txt```
+```pip install -r requirements.txt```
 or for others:
-```pip3 install -r requirments.txt```
+```pip3 install -r requirements.txt```
 
 7. Run the bot
 for Windows:
